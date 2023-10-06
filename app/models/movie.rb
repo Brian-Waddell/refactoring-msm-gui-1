@@ -19,8 +19,6 @@ class Movie < ApplicationRecord
 
     the_director = Director.where({ :id => my_director_id}).at(0)
 
-
-
     return the_director
   end 
 end

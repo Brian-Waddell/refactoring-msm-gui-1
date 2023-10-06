@@ -103,10 +103,14 @@
     <td>
       <%= movie.year %>
     </td>
-
+  
     <td>
-     <%= movie.director.name %>
+      <% if movie.director != nil %>
+        <%= movie.director.name %>
+      <% end %>
+      Director does not exist
     </td>
+  
 
     <td>
       <a href="/movies/<%= movie.id %>">
