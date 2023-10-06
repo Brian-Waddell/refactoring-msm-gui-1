@@ -11,4 +11,12 @@
 #  updated_at :datetime         not null
 #
 class Actor < ApplicationRecord
+
+  def characters
+    char_id = self.id 
+
+    character_relations = Character.where({ :actor_id => char_id})
+
+    return character_relations
+  end 
 end
